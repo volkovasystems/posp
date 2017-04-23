@@ -1,0 +1,45 @@
+{
+  "name": "posp",
+  "version": "0.0.0",
+  "description": "Pop spliced elements from array.",
+  "main": "posp.js",
+  "support": "posp.support.js",
+  "deploy": "posp.deploy.js",
+  "browser": "posp.deploy.js",
+  "scripts": {
+    "build": "babel posp.js --out-file posp.support.js --source-maps && webpack --progress --display-modules",
+    "test": "mocha posp-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volkovasystems/posp.git"
+  },
+  "keywords": [
+    "pop",
+    "splice",
+    "element",
+    "array",
+    "posp"
+  ],
+  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volkovasystems/posp/issues"
+  },
+  "homepage": "https://github.com/volkovasystems/posp#readme",
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "condev": "^0.4.0",
+    "doubt": "^0.25.0",
+    "exempt": "^0.7.0",
+    "falzy": "^0.19.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "source-map-loader": "^0.2.1",
+    "webpack": "^2.4.1"
+  }
+}

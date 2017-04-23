@@ -1,0 +1,32 @@
+{
+  "name": "posp",
+  "version": "0.0.0",
+  "description": "Pop spliced elements from array.",
+  "main": "posp.deploy.js",
+  "support": "posp.support.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "pop",
+    "splice",
+    "element",
+    "array",
+    "posp"
+  ],
+  "homepage": "https://github.com/volkovasystems/posp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "condev": "^0.4.0",
+    "doubt": "^0.25.0",
+    "exempt": "^0.7.0",
+    "falzy": "^0.19.0"
+  }
+}

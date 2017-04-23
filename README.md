@@ -1,2 +1,2 @@
 # posp
-Pop spliced element from array.
+Pop spliced elements from array.
