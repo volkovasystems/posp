@@ -1,6 +1,6 @@
 {
   "name": "posp",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Pop spliced elements from array.",
   "main": "posp.deploy.js",
   "support": "posp.support.js",
@@ -25,9 +25,9 @@
     "tests"
   ],
   "dependencies": {
-    "condev": "^0.8.0",
+    "condev": "^0.9.0",
     "doubt": "^0.26.0",
-    "exempt": "^0.10.0",
+    "exempt": "^0.11.0",
     "falzy": "^0.19.0"
   }
 }
