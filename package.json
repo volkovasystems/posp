@@ -1,6 +1,6 @@
 {
   "name": "posp",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Pop spliced elements from array.",
   "main": "posp.js",
   "support": "posp.support.js",
@@ -33,9 +33,9 @@
   "homepage": "https://github.com/volkovasystems/posp#readme",
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "condev": "^0.16.0",
-    "doubt": "^0.27.0",
-    "exempt": "^0.15.0",
+    "condev": "^0.17.0",
+    "doubt": "^0.30.0",
+    "exempt": "^0.16.0",
     "falzy": "^0.20.0"
   },
   "devDependencies": {
@@ -44,6 +44,6 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
     "source-map-loader": "^0.2.1",
-    "webpack": "^2.6.1"
+    "webpack": "^3.2.0"
   }
 }
