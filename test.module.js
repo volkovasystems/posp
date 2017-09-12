@@ -51,7 +51,7 @@
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const posp = require( "./posp.js" );
@@ -67,27 +67,85 @@ const path = require( "path" );
 
 
 //: @server:
-
 describe( "posp", ( ) => {
 
-} );
+	describe( "`posp( [ 1, 2, 3, 4, 5 ], 2 )`", ( ) => {
+		it( "should be equal to [ 1, 3, 4, 5 ]", ( ) => {
+			assert.deepEqual( posp( [ 1, 2, 3, 4, 5 ], 2 ), [ 1, 3, 4, 5 ] );
+		} );
+	} );
 
+	describe( "`posp( [ 'hello', 'world', 1, 2, 3, true, false, 5, 6 ], NUMBER )`", ( ) => {
+		it( "should be equal to [ 'hello', 'world', true, false ]", ( ) => {
+
+			assert.deepEqual( posp( [ "hello", "world", 1, 2, 3, true, false, 5, 6 ], NUMBER ),
+				[ 'hello', 'world', true, false ] );
+
+		} );
+	} );
+
+} );
 //: @end-server
 
 
 //: @client:
-
 describe( "posp", ( ) => {
 
-} );
+	describe( "`posp( [ 1, 2, 3, 4, 5 ], 2 )`", ( ) => {
+		it( "should be equal to [ 1, 3, 4, 5 ]", ( ) => {
+			assert.deepEqual( posp( [ 1, 2, 3, 4, 5 ], 2 ), [ 1, 3, 4, 5 ] );
+		} );
+	} );
 
+	describe( "`posp( [ 'hello', 'world', 1, 2, 3, true, false, 5, 6 ], NUMBER )`", ( ) => {
+		it( "should be equal to [ 'hello', 'world', true, false ]", ( ) => {
+
+			assert.deepEqual( posp( [ "hello", "world", 1, 2, 3, true, false, 5, 6 ], NUMBER ),
+				[ 'hello', 'world', true, false ] );
+
+		} );
+	} );
+
+} );
 //: @end-client
 
 
 //: @bridge:
-
 describe( "posp", ( ) => {
 
-} );
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
+	describe( "`posp( [ 1, 2, 3, 4, 5 ], 2 )`", ( ) => {
+		it( "should be equal to [ 1, 3, 4, 5 ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( posp( [ 1, 2, 3, 4, 5 ], 2 ) );
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.deepEqual( JSON.parse( result ), [ 1, 3, 4, 5 ] );
+		} );
+	} );
+
+	describe( "`posp( [ 'hello', 'world', 1, 2, 3, true, false, 5, 6 ], NUMBER )`", ( ) => {
+		it( "should be equal to [ 'hello', 'world', true, false ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( posp( [ "hello", "world", 1, 2, 3, true, false, 5, 6 ], NUMBER ) );
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.deepEqual( JSON.parse( result ), [ 'hello', 'world', true, false ] );
+		} );
+	} );
+
+} );
 //: @end-bridge
