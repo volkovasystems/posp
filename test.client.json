@@ -1,0 +1,116 @@
+{
+	"state": {
+		"passed": 2,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-09-12T06:46:50.905Z",
+	"end": "2017-09-12T06:47:31.969Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "posp",
+			"duration": 0,
+			"start": "2017-09-12T06:47:31.579Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "posp",
+			"duration": 204,
+			"start": "2017-09-12T06:47:31.580Z",
+			"end": "2017-09-12T06:47:31.784Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-09-12T06:47:31.582Z",
+					"end": "2017-09-12T06:47:31.583Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "posp",
+					"associatedTest": "should be equal to [ 1, 3, 4, 5 ]"
+				},
+				{
+					"start": "2017-09-12T06:47:31.713Z",
+					"end": "2017-09-12T06:47:31.714Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "posp",
+					"associatedTest": "should be equal to [ 1, 3, 4, 5 ]"
+				},
+				{
+					"start": "2017-09-12T06:47:31.715Z",
+					"end": "2017-09-12T06:47:31.715Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "posp",
+					"associatedTest": "should be equal to [ 'hello', 'world', true, false ]"
+				},
+				{
+					"start": "2017-09-12T06:47:31.784Z",
+					"end": "2017-09-12T06:47:31.784Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "posp",
+					"associatedTest": "should be equal to [ 'hello', 'world', true, false ]"
+				},
+				{
+					"start": "2017-09-12T06:47:31.784Z",
+					"end": "2017-09-12T06:47:31.784Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "posp"
+				}
+			]
+		},
+		{
+			"name": "`posp( [ 1, 2, 3, 4, 5 ], 2 )`",
+			"duration": 133,
+			"start": "2017-09-12T06:47:31.581Z",
+			"end": "2017-09-12T06:47:31.714Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 1, 3, 4, 5 ]",
+					"start": "2017-09-12T06:47:31.582Z",
+					"end": "2017-09-12T06:47:31.713Z",
+					"duration": 131,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`posp( [ 'hello', 'world', 1, 2, 3, true, false, 5, 6 ], NUMBER )`",
+			"duration": 69,
+			"start": "2017-09-12T06:47:31.715Z",
+			"end": "2017-09-12T06:47:31.784Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 'hello', 'world', true, false ]",
+					"start": "2017-09-12T06:47:31.715Z",
+					"end": "2017-09-12T06:47:31.783Z",
+					"duration": 68,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}

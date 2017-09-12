@@ -51,7 +51,7 @@
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const posp = require( "./posp.js" );
@@ -63,11 +63,24 @@ const posp = require( "./posp.js" );
 
 
 //: @server:
-
 describe( "posp", ( ) => {
 
-} );
+	describe( "`posp( [ 1, 2, 3, 4, 5 ], 2 )`", ( ) => {
+		it( "should be equal to [ 1, 3, 4, 5 ]", ( ) => {
+			assert.deepEqual( posp( [ 1, 2, 3, 4, 5 ], 2 ), [ 1, 3, 4, 5 ] );
+		} );
+	} );
 
+	describe( "`posp( [ 'hello', 'world', 1, 2, 3, true, false, 5, 6 ], NUMBER )`", ( ) => {
+		it( "should be equal to [ 'hello', 'world', true, false ]", ( ) => {
+
+			assert.deepEqual( posp( [ "hello", "world", 1, 2, 3, true, false, 5, 6 ], NUMBER ),
+				[ 'hello', 'world', true, false ] );
+
+		} );
+	} );
+
+} );
 //: @end-server
 
 

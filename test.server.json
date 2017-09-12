@@ -1,16 +1,46 @@
 {
-  "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-09-11T17:59:01.328Z",
-    "end": "2017-09-11T17:59:01.329Z",
-    "duration": 1
-  },
-  "tests": [],
-  "pending": [],
-  "failures": [],
-  "passes": []
+	"stats": {
+		"suites": 3,
+		"tests": 2,
+		"passes": 2,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-09-12T06:46:49.582Z",
+		"end": "2017-09-12T06:46:49.603Z",
+		"duration": 21
+	},
+	"tests": [
+		{
+			"title": "should be equal to [ 1, 3, 4, 5 ]",
+			"fullTitle": "posp `posp( [ 1, 2, 3, 4, 5 ], 2 )` should be equal to [ 1, 3, 4, 5 ]",
+			"duration": 8,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'hello', 'world', true, false ]",
+			"fullTitle": "posp `posp( [ 'hello', 'world', 1, 2, 3, true, false, 5, 6 ], NUMBER )` should be equal to [ 'hello', 'world', true, false ]",
+			"duration": 8,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should be equal to [ 1, 3, 4, 5 ]",
+			"fullTitle": "posp `posp( [ 1, 2, 3, 4, 5 ], 2 )` should be equal to [ 1, 3, 4, 5 ]",
+			"duration": 8,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'hello', 'world', true, false ]",
+			"fullTitle": "posp `posp( [ 'hello', 'world', 1, 2, 3, true, false, 5, 6 ], NUMBER )` should be equal to [ 'hello', 'world', true, false ]",
+			"duration": 8,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }
